@@ -1,0 +1,25 @@
+{
+  "name": "@lapo/extractcms",
+  "version": "1.0.0",
+  "description": "Extract CMS/PKCS#7 signed envelopes (does not verify signature).",
+  "main": "cms.js",
+  "keywords": [ "cms", "pkcs7", "der", "pem" ],
+  "author": "Lapo Luchini <lapo@lapo.it>",
+  "license": "ISC",
+  "dependencies": {
+    "@lapo/asn1js": "^1.0.0"
+  },
+  "files": [ "cms.js" ],
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [ "eslint:recommended" ],
+    "rules": {
+      "indent": [ "error", 4, { "outerIIFEBody": 0 } ],
+      "linebreak-style": [ "error", "unix" ],
+      "semi": [ "warn", "always" ]
+    }
+  }
+}
