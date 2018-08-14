@@ -1,6 +1,6 @@
 {
   "name": "@lapo/extractcms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extract CMS/PKCS#7 signed envelopes (does not verify signature).",
   "main": "cms.js",
   "keywords": [ "cms", "pkcs7", "der", "pem" ],
