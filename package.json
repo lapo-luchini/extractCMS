@@ -1,11 +1,17 @@
 {
   "name": "@lapo/extractcms",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extract CMS/PKCS#7 signed envelopes (does not verify signature).",
   "main": "cms.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapo-luchini/extractCMS.git"
+  },
   "keywords": [ "cms", "pkcs7", "der", "pem" ],
   "author": "Lapo Luchini <lapo@lapo.it>",
   "license": "ISC",
+  "bugs": { "url": "https://github.com/lapo-luchini/extractCMS/issues" },
+  "homepage": "https://github.com/lapo-luchini/extractCMS/",
   "dependencies": {
     "@lapo/asn1js": "^1.0.0"
   },
