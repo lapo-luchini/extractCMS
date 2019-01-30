@@ -12,7 +12,7 @@ Install with `npm install --save @lapo/extractcms`, use like this:
 
     const
         fs = require('fs'),
-        CMS = require('./cms'),
+        CMS = require('@lapo/extractcms'),
         envelope = fs.readFileSync(process.argv[2]),
         content = CMS.extract(envelope);
     console.log('Content length: ' + content.length);
