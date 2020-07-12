@@ -1,5 +1,5 @@
 // CMS (PKCS#7) SignedData extraction
-// Copyright (c) 2018 Lapo Luchini <lapo@lapo.it>
+// Copyright (c) 2018-2020 Lapo Luchini <lapo@lapo.it>
 
 // Permission to use, copy, modify, and/or distribute this software for any
 // purpose with or without fee is hereby granted, provided that the above
@@ -61,18 +61,28 @@ function parseCMS(data) {
     }
 }
 
-function extractCMS(data) {
-    let contentInfo = parseCMS(data); // https://tools.ietf.org/html/rfc5652#section-3
-    const signedData = parseTypedData(contentInfo, '1.2.840.113549.1.7.2', 'ContentInfo').sub[0]; // https://tools.ietf.org/html/rfc5652#section-5.1
+function CMS(data) {
+    this.contentInfo = parseCMS(data);
+}
+
+CMS.prototype.extract = function () {
+    const signedData = parseTypedData(this.contentInfo, '1.2.840.113549.1.7.2', 'ContentInfo').sub[0]; // https://tools.ietf.org/html/rfc5652#section-5.1
     if (signedData.typeName() != 'SEQUENCE')
         throw new Error('SignedData is not a DER SEQUENCE.');
     const encapContentInfo = signedData.sub[2]; // https://tools.ietf.org/html/rfc5652#section-5.1
     const eContent = parseTypedData(encapContentInfo, '1.2.840.113549.1.7.1', 'EncapsulatedContentInfo');
     const content = eContent.sub[0]; // https://tools.ietf.org/html/rfc5652#section-5.2
     return parseOctetString(content);
+};
+
+// utility methods to keep retro-compatibility
+
+CMS.parse = function (data) {
+    return new CMS(data).contentInfo;
+};
+
+CMS.extract = function (data) {
+    return new CMS(data).extract();
 }
 
-module.exports = {
-    parse: parseCMS,
-    extract: extractCMS,
-};
+module.exports = CMS;
