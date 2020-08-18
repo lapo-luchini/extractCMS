@@ -45,10 +45,10 @@ function parseCMS(data) {
         let b64 = data.toString('ascii');
         // if PEM delimiter is found, keep only content
         const header = '-----BEGIN PKCS7-----';
-        let idx = data.indexOf(header);
+        let idx = b64.indexOf(header);
         if (idx >= 0) {
             const idx1 = idx + header.length;
-            const idx2 = data.indexOf('-----END PKCS7-----', idx1);
+            const idx2 = b64.indexOf('-----END PKCS7-----', idx1);
             b64 = b64.slice(idx1, idx2);
         }
         // try Base64 on result
