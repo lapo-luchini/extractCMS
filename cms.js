@@ -1,5 +1,5 @@
 // CMS (PKCS#7) SignedData extraction
-// Copyright (c) 2018-2020 Lapo Luchini <lapo@lapo.it>
+// Copyright (c) 2018-2022 Lapo Luchini <lapo@lapo.it>
 
 // Permission to use, copy, modify, and/or distribute this software for any
 // purpose with or without fee is hereby granted, provided that the above

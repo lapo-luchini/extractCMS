@@ -20,7 +20,7 @@ Install with `npm install --save @lapo/extractcms`, use like this:
 ISC license
 -----------
 
-CMS (PKCS#7) SignedData extraction Copyright (c) 2018 Lapo Luchini <lapo@lapo.it>
+CMS (PKCS#7) SignedData extraction Copyright (c) 2018-2022 Lapo Luchini <lapo@lapo.it>
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
