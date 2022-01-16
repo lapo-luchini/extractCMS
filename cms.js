@@ -83,6 +83,6 @@ CMS.parse = function (data) {
 
 CMS.extract = function (data) {
     return new CMS(data).extract();
-}
+};
 
 module.exports = CMS;

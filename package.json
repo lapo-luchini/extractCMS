@@ -16,6 +16,9 @@
     "@lapo/asn1js": "^1.0.0"
   },
   "files": [ "cms.js" ],
+  "scripts" : {
+    "lint" : "npx eslint cms.js"
+  },
   "eslintConfig": {
     "env": {
       "es6": true,
