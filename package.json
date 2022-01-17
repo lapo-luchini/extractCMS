@@ -17,7 +17,8 @@
   },
   "files": [ "cms.js" ],
   "scripts" : {
-    "lint" : "npx eslint cms.js"
+    "lint" : "npx eslint cms.js test.js",
+    "test" : "node test"
   },
   "eslintConfig": {
     "env": {
